@@ -1,0 +1,38 @@
+
+
+.text-container {
+  display: flex;
+  justify-content: center; /* Opcional: centra el texto horizontalmente */
+  align-items: center; /* Opcional: centra el texto verticalmente si usas padding-top */
+  height: 25vh; /* Opcional: ocupa toda la altura de la vista */
+}
+
+.fading-text {
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  margin-top: 750px; /* Ajusta el valor según sea necesario */
+  color: #fff;
+}
+
+.fade {
+  opacity: 0;
+  animation: fadeInOut 10s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .9;
+  }
+}
+
+
+  

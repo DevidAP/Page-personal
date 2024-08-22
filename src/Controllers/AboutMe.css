@@ -1,0 +1,39 @@
+
+.about-me {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 150px;
+  }
+  
+  .about-me h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .about-me h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .about-me p {
+    line-height: 1.6;
+  }
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3;
+  }
+  

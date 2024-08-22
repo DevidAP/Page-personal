@@ -1,0 +1,51 @@
+/* src/Controllers/Skills.css */
+.skills {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .skill {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .progress-bar {
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0;
+  }
+  
+  .progress {
+    background-color: #007bff;
+    height: 100%;
+    width: 0; /* Width set dynamically */
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .skill span {
+    font-size: 0.9em;
+    color: #555;
+  }
+  

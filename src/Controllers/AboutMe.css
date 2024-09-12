@@ -2,7 +2,7 @@
   padding: 20px;
   font-family: Arial, sans-serif;
   margin: 0; /* Elimina el margen para aprovechar todo el espacio disponible */
-  
+  margin-top: 150px;
   width: 100%; /* Asegura que ocupe el 100% del ancho del contenedor */
   box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
 }

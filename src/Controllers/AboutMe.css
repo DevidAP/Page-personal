@@ -1,39 +1,62 @@
-
 .about-me {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    margin: 150px;
-  }
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0; /* Elimina el margen para aprovechar todo el espacio disponible */
   
+  width: 100%; /* Asegura que ocupe el 100% del ancho del contenedor */
+  box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+}
+
+.about-me h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.about-me h2 {
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.about-me p {
+  line-height: 1.6;
+}
+
+/* Botón de descarga */
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos Responsive */
+@media (max-width: 768px) {
   .about-me h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  
-  .about-me h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
-  }
-  
-  .about-me p {
-    line-height: 1.6;
+    font-size: 1.8em; /* Reduce el tamaño del título en pantallas pequeñas */
+    margin-top: 150px;
   }
 
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: center;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  .about-me h2 {
+    font-size: 1.3em; /* Reduce el tamaño del subtítulo en pantallas pequeñas */
   }
-  
-  .download-button:hover {
-    background-color: #0056b3;
+
+  .about-me p {
+    font-size: 1em; /* Asegura que el texto sea legible en pantallas pequeñas */
   }
-  
+
+  .download-button {
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible en pantallas pequeñas */
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total del botón */
+  }
+}

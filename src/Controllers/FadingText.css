@@ -5,12 +5,13 @@
   justify-content: center; /* Opcional: centra el texto horizontalmente */
   align-items: center; /* Opcional: centra el texto verticalmente si usas padding-top */
   height: 25vh; /* Opcional: ocupa toda la altura de la vista */
+  
 }
 
 .fading-text {
   font-size: 50px;
   font-family: Arial, sans-serif;
-  margin-top: 750px; /* Ajusta el valor según sea necesario */
+  margin-top: 950px; /* Ajusta el valor según sea necesario */
   color: #fff;
 }
 

@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import FadingText from "./Controllers/FadingText";
-import logo from "./image/programing.png";
+import logo from "./image/programing.png";  
 import AboutMe from "./Controllers/AboutMe";
 import Services from "./Controllers/Services";
 import Contact from "./Controllers/Contact";
 import Projects from "./Controllers/Projects";
+
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        // Ajusta este valor según sea necesario
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -21,53 +22,61 @@ function App() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <div className={`page-background ${isScrolled ? "scrolled" : ""}`}>
       <div className={`nav ${isScrolled ? "scrolled" : ""}`}>
+        <div className="menu-toggle" onClick={toggleMenu}>
+          &#9776; {/* Icono de menú hamburguesa */}
+        </div>
         <nav>
-          <ul>
+          <ul className={menuOpen ? "show" : ""}>
             <li>
-              <a href="#home">Home</a>
+              <a href="#home" onClick={toggleMenu}>Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" onClick={toggleMenu}>About</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#services" onClick={toggleMenu}>Services</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href="#projects" onClick={toggleMenu}>Projects</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" onClick={toggleMenu}>Contact</a>
             </li>
           </ul>
         </nav>
       </div>
 
+      {/* Asegúrate de que la imagen solo aparece aquí */}
       <div className="home" id="home">
         <FadingText />
         <div className="logo">
           <img src={logo} alt="Logo" />
         </div>
       </div>
+
       <div id="about">
         <AboutMe />
       </div>
       <div id="services">
-        <Services></Services>
+        <Services />
       </div>
       <div id="projects">
-        <Projects></Projects>
+        <Projects />
       </div>
       <div id="contact">
-        <Contact></Contact>
+        <Contact />
       </div>
     </div>
   );

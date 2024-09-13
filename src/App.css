@@ -87,7 +87,7 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 65px;
+    top: 50px;
     left: 0; /* Alinea el menú desplegable a la izquierda */
     width: 100%;
     background-color: rgba(18, 46, 205, 0.85);

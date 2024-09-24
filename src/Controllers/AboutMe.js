@@ -10,8 +10,8 @@ function AboutMe() {
       <h2>Intereses</h2>
       <p>En mi tiempo libre, disfruto de programar. Estoy siempre buscando nuevas formas de aprender y crecer profesionalmente.</p>
       <a
-        href="/cv-david-arroyo-pichardo.pdf" 
-        download="CV_David_Arroyo_Pichardo.pdf" 
+        href="/David Arroyo Pichardo CV.pdf" 
+        download="David Arroyo Pichardo CV.pdf" 
         className="download-button">
           Descargar CV
 

@@ -12,7 +12,7 @@ const projects = [
   {
     title: 'Ejercicios',
     description: 'blog.',
-    imageUrl: 'url-de-imagen-2.jpg',
+    imageUrl: '/gym.png',
     link: 'https://ejercicios-blog.netlify.app/',
   },
   // Agrega más proyectos según sea necesario

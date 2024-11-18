@@ -1,32 +1,39 @@
-// src/Controllers/Contact.js
 import React, { useState } from 'react';
-import './Contact.css'; // Asegúrate de tener este archivo de estilos
+import './Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [status, setStatus] = useState(''); // Estado para el mensaje de confirmación
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Evitar que se recargue la página
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí podrías agregar la lógica para enviar el formulario, como una llamada a una API
-    alert('Mensaje enviado!');
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xvgoqkwe', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        setStatus('¡Mensaje enviado con éxito!');
+        form.reset(); // Limpiar el formulario
+      } else {
+        setStatus('Hubo un error al enviar tu mensaje. Inténtalo de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('Hubo un error al enviar tu mensaje. Inténtalo de nuevo.');
+    }
   };
 
   return (
     <section className="contact">
       <h2>Contacto</h2>
-      
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Nombre</label>
@@ -34,8 +41,7 @@ function Contact() {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            placeholder="Tu nombre"
             required
           />
         </div>
@@ -45,8 +51,7 @@ function Contact() {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            placeholder="Tu correo"
             required
           />
         </div>
@@ -55,13 +60,15 @@ function Contact() {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
+            placeholder="Escribe tu mensaje"
             required
           ></textarea>
         </div>
         <button type="submit">Enviar</button>
       </form>
+
+      {/* Mensaje de confirmación */}
+      {status && <p className="status-message">{status}</p>}
 
       <div className="contact-buttons">
         <a href="tel:+525561015604" className="contact-button">Llamar</a>

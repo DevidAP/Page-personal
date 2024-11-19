@@ -5,15 +5,21 @@ import './Projects.css'; // Asegúrate de tener este archivo de estilos
 const projects = [
   {
     title: 'Pagina de jabones',
-    description: 'Pagina de jabones.',
+    description: 'Pagina de jabones en la que se puede comprar jabones, tonicos, shampoo y macerados.',
     imageUrl: './jabones.png',
     link: 'https://artesanales.netlify.app/',
   },
   {
     title: 'Ejercicios',
-    description: 'blog.',
+    description: 'blog en que te recomienda ejercicios para cada parte del cuerrpo.',
     imageUrl: '/gym.png',
     link: 'https://ejercicios-blog.netlify.app/',
+  },
+  {
+    title: 'AdoptMe',
+    description: 'Página web en que las se registran las mascotas para que se puedan adoptar además de que se pueden registrar usuarios.',
+    imageUrl: '/AdoptMe.png',
+    link: '/',
   },
   // Agrega más proyectos según sea necesario
 ];
